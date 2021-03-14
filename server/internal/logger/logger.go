@@ -1,10 +1,10 @@
 package logger
 
 import (
-	"calendar/server/interfaces"
-	"calendar/server/internal/configuration"
 	"errors"
 	"fmt"
+	"github.com/and67o/calendar/server/internal/configuration"
+	"github.com/and67o/calendar/server/internal/interfaces"
 	"strings"
 
 	"go.uber.org/zap"

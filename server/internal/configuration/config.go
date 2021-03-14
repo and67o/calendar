@@ -1,15 +1,20 @@
 package configuration
 
-import ("errors"
+import (
+	"errors"
 	"fmt"
 	"github.com/spf13/viper"
+)
+
+var (
+	EmptyPathError = errors.New("path empty")
 )
 
 func New(path string) (Config, error) {
 	var configuration Config
 
 	if path == "" {
-		return configuration, errors.New("path empty")
+		return configuration, EmptyPathError
 	}
 
 	viper.SetConfigFile(path)

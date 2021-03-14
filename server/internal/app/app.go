@@ -1,6 +1,6 @@
 package app
 
-import "calendar/server/interfaces"
+import "github.com/and67o/calendar/server/internal/interfaces"
 
 type App struct {
 	Logger  interfaces.Logger

@@ -1,14 +1,14 @@
 package main
 
 import (
-	"calendar/server/interfaces"
-	"calendar/server/internal/app"
-	"calendar/server/internal/configuration"
-	"calendar/server/internal/logger"
-	internalhttp "calendar/server/internal/server/http"
-	"calendar/server/storage"
 	"context"
 	"flag"
+	"github.com/and67o/calendar/server/internal/app"
+	"github.com/and67o/calendar/server/internal/configuration"
+	"github.com/and67o/calendar/server/internal/interfaces"
+	"github.com/and67o/calendar/server/internal/logger"
+	internalhttp "github.com/and67o/calendar/server/internal/server/http"
+	"github.com/and67o/calendar/server/internal/storage"
 	"log"
 	"os"
 	"os/signal"
@@ -19,10 +19,10 @@ import (
 var configFile string
 
 func init() {
-	flag.StringVar(&configFile, "config", "./configs/config.toml", "Path to configuration file")
+	flag.StringVar(&configFile, "config", "./configs/config.yaml", "Path to configuration file")
 }
 
-func main()  {
+func main() {
 	flag.Parse()
 
 	config, err := configuration.New(configFile)
@@ -42,7 +42,10 @@ func main()  {
 
 	calendar := app.New(logg, storageSql)
 
-	httpServer:=internalhttp.New(calendar, config.Rest)
+	httpServer, err := internalhttp.New(calendar, config.Rest)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	_, cancel := context.WithCancel(context.Background())
 	defer cancel()
@@ -54,7 +57,7 @@ func main()  {
 	err = httpServer.Start()
 	if err != nil {
 		logg.Error("failed to start http server: " + err.Error())
-		os.Exit(1) //nolint:gocritic
+		os.Exit(1)
 	}
 }
 
