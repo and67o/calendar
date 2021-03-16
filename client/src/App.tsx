@@ -2,16 +2,14 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getCheckServer, getIsInitialize, getTestMessage} from "./redux/app-selector";
 import {actionsApp, getCheckTestServer} from "./redux/app";
-import {RegisterForm} from "./components/Forms";
+import {RegisterForm} from "./components/forms/Forms";
 import CalendarComponent from "./components/calendar/Calendar";
 import Preloader from "./components/prelodaer/Preloader";
+import Header from "./components/header/Header";
 
 const App = () => {
 
     const isInitialize = useSelector(getIsInitialize)
-    const testMessage = useSelector(getTestMessage)
-    const checkServer = useSelector(getCheckServer)
-
     const dispatch = useDispatch()
 
     useEffect(() => {
@@ -23,8 +21,8 @@ const App = () => {
 
     if (isInitialize) {
         return (
-            <div>
-                <TestMessage checkServer={checkServer} test={testMessage}/>
+            <div className="wrapper">
+                <Header/>
                 <RegisterForm/>
                 <CalendarComponent/>
             </div>
@@ -39,22 +37,4 @@ const App = () => {
 }
 
 export default App;
-
-
-const TestMessage: React.FC<any> = ({test, checkServer}) => {
-
-    let style
-
-    if (checkServer) {
-        style = {background: "green"}
-    } else {
-        style = {background: "red"}
-    }
-
-    return (
-        <div style={style}>
-            {test}
-        </div>
-    )
-}
 
