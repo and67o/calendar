@@ -7,6 +7,7 @@ import (
 	"github.com/and67o/calendar/server/internal/app"
 	"github.com/and67o/calendar/server/internal/configuration"
 	"github.com/and67o/calendar/server/internal/interfaces"
+	"github.com/and67o/calendar/server/internal/response"
 	"github.com/and67o/calendar/server/internal/router"
 	"net"
 	"net/http"
@@ -21,10 +22,10 @@ type Server struct {
 	server *http.Server
 }
 
-func New(app *app.App, config configuration.HTTPConf) (interfaces.HTTPApp, error) {
-	r := router.New()
-fmt.Println(r.GetRouter())
-	addr, err := getAddr(config)
+func New(app *app.App) (interfaces.HTTPApp, error) {
+	r := router.New(app)
+
+	addr, err := getAddr(app.Config.GetHTTP())
 	if err != nil {
 		return nil, err
 	}
@@ -61,4 +62,8 @@ func (s *Server) Stop(ctx context.Context) error {
 	}
 
 	return nil
+}
+
+func (s *Server) Hello(w http.ResponseWriter, _ *http.Request) {
+	response.JSON(w, http.StatusOK, map[string]string{"message": "hello-world"})
 }

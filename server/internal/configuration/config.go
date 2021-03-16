@@ -10,8 +10,8 @@ var (
 	EmptyPathError = errors.New("path empty")
 )
 
-func New(path string) (Config, error) {
-	var configuration Config
+func New(path string) (*Config, error) {
+	var configuration = new(Config)
 
 	if path == "" {
 		return configuration, EmptyPathError

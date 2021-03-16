@@ -1,6 +1,7 @@
 package middlewares
 
 import (
+	"github.com/and67o/calendar/server/internal/apiError"
 	"github.com/and67o/calendar/server/internal/auth"
 	"github.com/and67o/calendar/server/internal/errors"
 	"github.com/and67o/calendar/server/internal/response"
@@ -11,11 +12,10 @@ func isAuth(next http.HandlerFunc) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		err := auth.TokenValid(r)
 		if err != nil {
-			response.ERROR(
-				w,
-				http.StatusUnauthorized,
-				errors.UnauthorizedUser(1),
-			)
+			response.ERROR1(w, apiError.ApiError{
+				Message: "session invalid for user id",
+				Code:   http.StatusUnauthorized,
+			})
 			return
 		}
 		next(w, r)

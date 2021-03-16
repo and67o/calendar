@@ -2,6 +2,9 @@ package interfaces
 
 import (
 	"context"
+	"github.com/and67o/calendar/server/internal/configuration"
+	"github.com/and67o/calendar/server/internal/model"
+	"github.com/jinzhu/gorm"
 )
 
 type Logger interface {
@@ -15,4 +18,15 @@ type HTTPApp interface {
 }
 
 type Storage interface {
+	Close() error
+	GetDb() *gorm.DB
+	GetByEmail(email string) (*model.User, error)
+	SaveUser(u model.User) (*model.User, error)
+}
+
+type Config interface {
+	GetLogger() configuration.LoggerConf
+	GetHTTP() configuration.HTTPConf
+	GetDB() configuration.DBConf
+	GetToken() configuration.TokenConf
 }

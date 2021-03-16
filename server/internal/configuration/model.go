@@ -4,6 +4,7 @@ type Config struct {
 	Logger LoggerConf
 	Rest   HTTPConf
 	DB     DBConf
+	Token  TokenConf
 }
 
 type LoggerConf struct {
@@ -26,3 +27,25 @@ type DBConf struct {
 	Port   int    `mapstructure:"db_port"`
 }
 
+type TokenConf struct {
+	AccessTimeExp  int    `mapstructure:"token_access_expire_time"`
+	RefreshTimeExp int    `mapstructure:"token_refresh_expire_time"`
+	ApiAccessKey   string `mapstructure:"token_api_access_key"`
+	ApiRefreshKey  string `mapstructure:"token_api_refresh_key"`
+}
+
+func (c *Config) GetToken() TokenConf {
+	return c.Token
+}
+
+func (c *Config) GetLogger() LoggerConf {
+	return c.Logger
+}
+
+func (c Config) GetHTTP() HTTPConf {
+	return c.Rest
+}
+
+func (c Config) GetDB() DBConf {
+	return c.DB
+}

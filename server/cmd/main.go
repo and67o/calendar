@@ -30,19 +30,19 @@ func main() {
 		log.Fatal(err)
 	}
 
-	logg, err := logger.New(config.Logger)
+	logg, err := logger.New(config.GetLogger())
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	storageSql, err := storage.New(config.DB)
+	storageSql, err := storage.New(config.GetDB())
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	calendar := app.New(logg, storageSql)
+	calendar := app.New(logg, storageSql, config)
 
-	httpServer, err := internalhttp.New(calendar, config.Rest)
+	httpServer, err := internalhttp.New(calendar)
 	if err != nil {
 		log.Fatal(err)
 	}
