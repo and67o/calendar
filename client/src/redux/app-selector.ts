@@ -7,3 +7,7 @@ export const getIsInitialize = (state: AppStateType) => {
 export const getTestMessage = (state: AppStateType) => {
     return state.app.test
 }
+
+export const getCheckServer = (state: AppStateType) => {
+    return state.app.checkServer
+}
