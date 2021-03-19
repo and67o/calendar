@@ -21,6 +21,8 @@ type Storage interface {
 	Close() error
 	GetDb() *gorm.DB
 	GetByEmail(email string) (*model.User, error)
+	GetById(id uint64) (*model.User, error)
+	DeleteUser(id uint64) error
 	SaveUser(u model.User) (*model.User, error)
 }
 

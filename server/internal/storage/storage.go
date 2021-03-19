@@ -70,8 +70,34 @@ func (s *Storage) SaveUser(u model.User) (*model.User, error) {
 
 	err = s.db.Debug().Create(&u).Error
 	if err != nil {
-		return &model.User{}, err
+		return nil, err
 	}
 
 	return &u, nil
+}
+
+func (s *Storage) GetById(id uint64) (*model.User, error) {
+	user := model.User{}
+
+	err := s.db.Model(model.User{}).
+		Find(id).
+		Error
+
+	if err != nil {
+		return &user, err
+	}
+
+	return &user, err
+}
+
+func (s *Storage) DeleteUser(id uint64) error {
+	err := s.db.Model(model.User{}).
+		Delete(id).
+		Error
+
+	if err != nil {
+		return err
+	}
+
+	return nil
 }
