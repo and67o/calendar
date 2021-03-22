@@ -11,6 +11,6 @@ type Claims struct {
 
 type Token struct {
 	AccessToken   string
-	RefreshToken  string
+	//RefreshToken  string
 	AccessExpires int64
 }

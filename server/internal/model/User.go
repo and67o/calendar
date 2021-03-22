@@ -21,9 +21,12 @@ type User struct {
 	UpdatedAt time.Time `gorm:"default:CURRENT_TIMESTAMP" json:"updated_at"`
 }
 
-func VerifyPassword(hashedPassword string, password string) error {
-	return bcrypt.CompareHashAndPassword([]byte(hashedPassword), []byte(password))
+func (u *User) VerifyPassword(password string) error {
+	return bcrypt.CompareHashAndPassword([]byte(u.Password), []byte(password))
 }
+//func VerifyPassword(hashedPassword string, password string) error {
+//	return bcrypt.CompareHashAndPassword([]byte(hashedPassword), []byte(password))
+//}
 
 func (u *User) HashPassword() error {
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(u.Password), bcrypt.DefaultCost)
@@ -40,50 +43,6 @@ func (u *User) Prepare() {
 	u.CreatedAt = time.Now()
 	u.UpdatedAt = time.Now()
 }
-
-//func (u *User) Validate(action string) error {
-//	switch strings.ToLower(action) {
-//	case "update":
-//		if u.Nickname == "" {
-//			return errors.New("Required Nickname")
-//		}
-//		if u.Password == "" {
-//			return errors.New("Required Password")
-//		}
-//		if u.Email == "" {
-//			return errors.New("Required Email")
-//		}
-//		if err := checkmail.ValidateFormat(u.Email); err != nil {
-//			return errors.New("Invalid Email")
-//		}
-//
-//		return nil
-//	case "login":
-//		if u.Password == "" {
-//			return errors.New("Required Password")
-//		}
-//
-//		if err := checkmail.ValidateFormat(u.Email); err != nil {
-//			return errors.New("Invalid Email")
-//		}
-//		return nil
-//
-//	default:
-//		if u.Nickname == "" {
-//			return errors.New("Required Nickname")
-//		}
-//		if u.Password == "" {
-//			return errors.New("Required Password")
-//		}
-//		if u.Email == "" {
-//			return errors.New("Required Email")
-//		}
-//		if err := checkmail.ValidateFormat(u.Email); err != nil {
-//			return errors.New("Invalid Email")
-//		}
-//		return nil
-//	}
-//}
 
 func (u *User) GetByEmail(db *gorm.DB, email string) (User, error) {
 	user := User{}
@@ -119,14 +78,14 @@ func (u *User) CreateToken(conf configuration.TokenConf) (*auth.Token, error) {
 		return nil, err
 	}
 
-	refreshToken, _, err := token([]byte(conf.ApiRefreshKey), u.ID, conf.RefreshTimeExp)
-	if err != nil {
-		return nil, err
-	}
+	//refreshToken, _, err := token([]byte(conf.ApiRefreshKey), u.ID, conf.RefreshTimeExp)
+	//if err != nil {
+	//	return nil, err
+	//}
 
 	return &auth.Token{
 		AccessToken:   accessToken,
-		RefreshToken:  refreshToken,
+		//RefreshToken:  refreshToken,
 		AccessExpires: AccessTokenExt,
 	}, nil
 }
