@@ -76,13 +76,10 @@ func (s *Storage) SaveUser(u model.User) (*model.User, error) {
 	return &u, nil
 }
 
-func (s *Storage) GetById(id uint64) (*model.User, error) {
-	user := model.User{}
+func (s *Storage) GetById(id int64) (*model.User, error) {
+	var user model.User
 
-	err := s.db.Model(model.User{}).
-		Find(id).
-		Error
-
+	err := s.db.First(&user, id).Error
 	if err != nil {
 		return &user, err
 	}
@@ -90,11 +87,18 @@ func (s *Storage) GetById(id uint64) (*model.User, error) {
 	return &user, err
 }
 
-func (s *Storage) DeleteUser(id uint64) error {
-	err := s.db.Model(model.User{}).
-		Delete(id).
-		Error
+func (s *Storage) GetUsers() (*[]model.User, error) {
+	var users []model.User
+	err := s.db.Find(&users).Error
+	if err != nil {
+		return &users, err
+	}
 
+	return &users, err
+}
+
+func (s *Storage) DeleteUser(id uint64) error {
+	err := s.db.Delete(model.User{}, id).Error
 	if err != nil {
 		return err
 	}

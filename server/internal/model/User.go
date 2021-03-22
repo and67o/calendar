@@ -24,9 +24,6 @@ type User struct {
 func (u *User) VerifyPassword(password string) error {
 	return bcrypt.CompareHashAndPassword([]byte(u.Password), []byte(password))
 }
-//func VerifyPassword(hashedPassword string, password string) error {
-//	return bcrypt.CompareHashAndPassword([]byte(hashedPassword), []byte(password))
-//}
 
 func (u *User) HashPassword() error {
 	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(u.Password), bcrypt.DefaultCost)
