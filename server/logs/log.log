@@ -1,0 +1,551 @@
+2021-03-14T22:59:27.624+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:00:59.637+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:00:59.638+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:56
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:01:01.979+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:01:12.942+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:01:12.942+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:56
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:01:14.881+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:02:12.449+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:02:12.449+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:56
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:02:13.759+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:02:32.024+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:02:32.024+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:56
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:02:33.814+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:06:50.963+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:06:50.963+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:56
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:06:52.891+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:08:00.243+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:08:00.243+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:08:02.165+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:09:03.774+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:09:03.775+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:09:05.249+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:09:40.436+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:09:40.436+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:09:42.642+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:11:49.815+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:11:49.815+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:11:51.549+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:13:09.631+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:13:09.631+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:13:11.479+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:13:42.030+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:13:42.030+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:13:43.365+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:15:01.599+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:15:01.599+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:15:02.861+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:16:49.204+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:16:49.204+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:16:50.573+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:16:51.154+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:16:51.155+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:16:53.386+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:17:06.530+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:17:06.530+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:17:07.871+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:17:37.154+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:17:37.154+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:17:38.461+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:23:08.074+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:23:08.074+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:23:21.819+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:43:20.617+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:43:20.617+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:43:22.818+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:43:55.036+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:43:55.036+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:43:56.746+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:48:12.152+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:48:12.153+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:48:14.401+0300	INFO	logger/logger.go:87	calendar start
+2021-03-14T23:51:17.728+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-14T23:51:17.728+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-14T23:51:19.849+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T00:32:34.333+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T00:32:34.333+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T00:32:42.900+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T00:33:48.674+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T00:33:48.674+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T00:33:50.453+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T00:36:02.987+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T00:36:02.987+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:20:47.181+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:22:18.253+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:22:18.254+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:22:21.793+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:24:48.290+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:24:48.291+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:24:51.027+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:25:56.869+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:25:56.869+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:25:58.819+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:31:11.875+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:31:11.876+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:31:13.085+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:32:43.945+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:32:43.946+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:32:54.733+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:44:02.812+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:44:02.812+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:44:04.974+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:45:25.788+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:45:25.788+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:45:26.989+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:47:48.809+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:47:48.809+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:47:51.976+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:49:21.604+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:49:21.604+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:49:22.706+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T21:51:10.726+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T21:51:10.726+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T21:51:11.801+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T22:02:48.008+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T22:02:48.008+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T22:03:11.312+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T22:04:09.358+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T22:04:09.358+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T22:04:11.422+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T22:05:11.453+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T22:05:11.454+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-15T22:05:13.535+0300	INFO	logger/logger.go:87	calendar start
+2021-03-15T22:52:54.718+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-15T22:52:54.718+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-16T22:43:40.589+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T17:24:48.322+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T17:48:36.981+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T17:48:36.989+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T17:48:40.239+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T17:52:36.328+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T17:52:36.328+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T17:52:38.632+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T17:53:56.316+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T17:53:56.317+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T17:53:58.076+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T17:54:30.005+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T17:54:30.006+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T17:54:32.745+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T17:55:23.175+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T17:55:23.176+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T17:55:25.084+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T17:56:09.836+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T17:56:09.836+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T17:56:11.560+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T17:57:25.921+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T17:57:25.921+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T17:57:27.748+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T17:57:31.440+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T17:57:31.440+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T17:57:33.021+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T18:03:19.796+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T18:03:19.797+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T18:03:21.604+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T18:04:56.303+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T18:04:56.303+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T18:04:57.901+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T19:03:37.318+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T19:03:37.327+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T19:03:39.985+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T19:51:53.475+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T19:51:53.475+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T19:51:56.043+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T19:52:49.905+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T19:52:49.906+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T19:52:52.027+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T19:53:09.539+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T19:53:09.540+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T19:53:58.748+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T19:55:05.033+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T19:55:05.034+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T19:55:07.905+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T19:57:02.678+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T19:57:02.678+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T19:57:04.570+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T20:22:22.895+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T20:22:22.902+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T20:22:25.701+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T20:23:36.042+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T20:23:36.044+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T20:23:38.912+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T20:23:39.613+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T20:23:39.613+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T20:23:41.344+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T20:24:38.761+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T20:24:38.763+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T20:24:43.990+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T20:27:13.797+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T20:27:13.804+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T20:27:17.049+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T20:29:36.973+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T20:29:37.050+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T20:54:38.735+0300	INFO	logger/logger.go:87	calendar start
+2021-03-22T20:59:06.158+0300	INFO	logger/logger.go:87	http server shutdown
+2021-03-22T20:59:06.159+0300	ERROR	logger/logger.go:91	failed to start http server: server start: http: Server closed
+github.com/and67o/calendar/server/internal/logger.Logg.Error
+	/var/www/golang/src/calendar/server/internal/logger/logger.go:91
+main.main
+	/var/www/golang/src/calendar/server/cmd/main.go:59
+runtime.main
+	/root/sdk/go1.15.1/src/runtime/proc.go:204
+2021-03-22T20:59:37.478+0300	INFO	logger/logger.go:87	calendar start

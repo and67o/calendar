@@ -1,0 +1,23 @@
+logger: {
+  log_level: "INFO",
+  log_file: "logs/log.log",
+  log_trace_on: false,
+  log_prod_on: false,
+}
+db: {
+  db_user: "admin",
+  db_password: "123",
+  db_database: "go_api",
+  db_host: "localhost",
+  db_port: 3306,
+}
+rest: {
+  server_host: "localhost",
+  server_port: 8001,
+}
+token: {
+  token_access_expire_time: 15,
+  token_refresh_expire_time: 15,
+  token_api_access_key: "access",
+  token_api_refresh_key: "refresh",
+}
