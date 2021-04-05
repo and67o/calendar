@@ -22,6 +22,8 @@
     "antd": "^4.13.1",
     "axios": "^0.21.1",
     "formik": "^2.2.6",
+    "yup": "^0.32.9",
+    "axios-mock-adapter": "^1.19.0",
     "html-webpack-plugin": "^5.3.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "@types/postcss-flexbugs-fixes": "^4.2.0",

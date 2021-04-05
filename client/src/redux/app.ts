@@ -2,7 +2,7 @@ import {BaseThunkType, InferActionsTypes} from './redux-store'
 import {testAPI} from "../api/test-api";
 
 const initialState = {
-    isInitialize: false,
+    isInitialize: null as boolean | null,
     test: "",
     checkServer: false
 }
@@ -46,11 +46,10 @@ export const actionsApp = {
 
 export const getCheckTestServer = (): ThunkType =>
     async (dispatch) => {
-    dispatch(actionsApp.setInitialize(false))
+        dispatch(actionsApp.setInitialize(false))
+        console.log("проверка сервера")
         await testAPI.check()
-            .then((res:any) => {
-                const message = res.message
-                dispatch(actionsApp.setTestMessage(message))
+            .then((res: any) => {
                 dispatch(actionsApp.setCheckServer(true))
                 dispatch(actionsApp.setInitialize(true))
             })

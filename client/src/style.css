@@ -26,6 +26,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     padding: 0 50px;
 }
 
+.header > .login {
+    font-size: 33px;
+    color: #afd4a0;
+}
+
+.header>p {
+    margin: 0;
+}
+
 .form {
     padding: 50px;
     max-width: 400px;
@@ -33,6 +42,19 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     display: flex;
     margin: 0 auto;
     justify-content: center;
+}
+
+.description {
+    padding: 50px;
+    max-height: 400px;
+    margin: 0 auto;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.description > a {
+    font-size: 33px;
+    color: #afd4a0;
 }
 
 .calendar {
