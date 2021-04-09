@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"flag"
+	"fmt"
 	"github.com/and67o/calendar/server/internal/app"
 	"github.com/and67o/calendar/server/internal/configuration"
 	"github.com/and67o/calendar/server/internal/interfaces"
@@ -19,17 +20,17 @@ import (
 var configFile string
 
 func init() {
-	flag.StringVar(&configFile, "config", "./configs/config.yaml", "Path to configuration file")
+	flag.StringVar(&configFile, "config", "C:\\projectgo\\calendar\\calendar\\server\\configs\\config.yaml", "Path to configuration file")
 }
 
 func main() {
 	flag.Parse()
-
 	config, err := configuration.New(configFile)
+	fmt.Println(config)
 	if err != nil {
 		log.Fatal(err)
 	}
-
+	fmt.Println(config)
 	logg, err := logger.New(config.GetLogger())
 	if err != nil {
 		log.Fatal(err)

@@ -6,3 +6,7 @@ export const getDataUser = (state: AppStateType) => {
         login: state.auth.login,
     }
 }
+
+export const getInit = (state: AppStateType) => {
+    return state.auth.isInitialize
+}

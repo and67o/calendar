@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from "react-redux";
 import {getCheckServer, getIsInitialize, getTestMessage} from "./redux/app-selector";
 import {actionsApp, getCheckTestServer} from "./redux/app";
-import {FormComponent} from "./components/forms/Forms";
+import {FormComponentContainer} from "./components/forms/Forms";
 import CalendarComponent from "./components/calendar/Calendar";
 import Preloader from "./components/prelodaer/Preloader";
 import Header from "./components/header/Header";
@@ -23,7 +23,7 @@ const App = () => {
         return (
             <div className="wrapper">
                 <Header/>
-                {dataUser.auth ? <DataUser login={dataUser.login}/> : <FormComponent/>}
+                {dataUser.auth ? <DataUser login={dataUser.login}/> : <FormComponentContainer/>}
                 <CalendarComponent/>
             </div>
         )

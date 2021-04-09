@@ -31,7 +31,7 @@ func New(configuration configuration.LoggerConf) (interfaces.Logger, error) {
 	config.DisableStacktrace = configuration.TraceOn
 
 	config.OutputPaths = []string{outPut}
-	config.OutputPaths = []string{configuration.File}
+	//config.OutputPaths = []string{configuration.File}
 
 	lvl, err := setLevel(configuration.Level)
 	if err != nil {
