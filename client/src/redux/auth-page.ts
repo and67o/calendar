@@ -85,7 +85,9 @@ export const getUserDataThunk = (id: number): ThunkType =>
                 const data = res.Data
                 dispatch(actionsAuth.setLogin(data.firstname, true))
             })
-            .catch(() => console.log("Сбой сервера"))
+            .catch(() => {
+                dispatch(checkAuth())
+            })
 
     }
 

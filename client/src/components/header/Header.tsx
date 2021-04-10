@@ -8,9 +8,7 @@ const Header = () => {
 
     const dispatch = useDispatch()
 
-    const logout = () => {
-        dispatch(logoutThunk())
-    }
+    const logout = () => dispatch(logoutThunk())
 
     const data = useSelector(getDataUser)
 

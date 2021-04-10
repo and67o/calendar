@@ -12,49 +12,21 @@ export const FormComponentContainer = () => {
 
     const init = useSelector(getInit)
 
-    if (init == false) {
-        return (
-            <div>
-                <Forms/>
-            </div>
-        )
-    } else {
-        return (
-            <Preloader/>
-        )
-    }
+    return (!init) ? <Forms/> : <Preloader/>
 }
 
 const Forms: React.FC<any> = () => {
 
     const dispatch = useDispatch()
 
-    const sendRegister = (values: any) => {
-        const {password, email, firstname, lastname} = values
-        dispatch(registerThunk(email, password,  firstname, lastname))
-    }
+    const sendRegister = (values: RegisterFormValueType) => dispatch(registerThunk(values.email, values.password, values.firstname, values.lastname))
 
-    const sendAuthorization = (values: any) => {
-        const {password, email} = values
-        dispatch(loginThunk(email, password))
-    }
+    const sendAuthorization = (values: AuthFormValueType) => dispatch(loginThunk(values.email, values.password))
 
     const [form, setForm] = useState("register")
 
-    if (form == "register") {
-        return (
-            <div className="form">
-                <RegisterForm submit={sendRegister} formChange={setForm}/>
-            </div>
-        )
-    } else if (form == "authorization") {
-        return (
-            <div className="form">
-                <AuthForm submit={sendAuthorization} formChange={setForm}/>
-            </div>
-        )
-    } else {
-    }
+    return (form === "register") ? <div className="form"><RegisterForm submit={sendRegister} formChange={setForm}/></div>
+                                 : <div className="form"><AuthForm submit={sendAuthorization} formChange={setForm}/></div>
 }
 
 const RegisterForm: React.FC<any> = ({submit, formChange}) => {
@@ -67,10 +39,15 @@ const RegisterForm: React.FC<any> = ({submit, formChange}) => {
         },
         validationSchema: Yup.object({
             email: Yup.string()
-                .required('Required'),
+                .email('Введите почту полностью!')
+                .required('Обязательное поле'),
             password: Yup.string()
-                .min(6, 'Password must be at least 6 characters')
-                .required('Required'),
+                .min(6, 'Пароль должен содержеть не менее 6 символов')
+                .required('Обязательное поле'),
+            firstname: Yup.string()
+                .required('Обязательное поле'),
+            lastname: Yup.string()
+                .required('Обязательное поле'),
         }),
         onSubmit: values => {
             submit(values)
@@ -81,7 +58,7 @@ const RegisterForm: React.FC<any> = ({submit, formChange}) => {
             <div>Если вы уже зарегистрированы воспользуйтесь формой входа<Button size="large" type="default"
                                                                                  onClick={() => formChange("authorization")}>Войти</Button>
             </div>
-            <label htmlFor="email">Логин</label>
+            <label htmlFor="email">Почта</label>
             <Input id="email"
                    name="email"
                    type="email"
@@ -98,7 +75,8 @@ const RegisterForm: React.FC<any> = ({submit, formChange}) => {
                             value={formik.values.password}
                             {...formik.getFieldProps('password')}
             />
-            {formik.touched.password && formik.errors.password ? <Alert message={formik.errors.password} type="error"/> : null}
+            {formik.touched.password && formik.errors.password ?
+                <Alert message={formik.errors.password} type="error"/> : null}
             <label htmlFor="firstname">Имя</label>
             <Input id="firstname"
                    name="firstname"
@@ -107,6 +85,7 @@ const RegisterForm: React.FC<any> = ({submit, formChange}) => {
                    value={formik.values.firstname}
                    {...formik.getFieldProps('firstname')}
             />
+            {formik.touched.firstname && formik.errors.firstname ? <Alert message={formik.errors.firstname} type="error"/> : null}
             <label htmlFor="lastname">Фамилия</label>
             <Input id="lastname"
                    name="lastname"
@@ -115,6 +94,7 @@ const RegisterForm: React.FC<any> = ({submit, formChange}) => {
                    value={formik.values.lastname}
                    {...formik.getFieldProps('lastname')}
             />
+            {formik.touched.lastname && formik.errors.lastname ? <Alert message={formik.errors.lastname} type="error"/> : null}
             <Button size="large" type="primary" htmlType="submit">Регистрация</Button>
         </form>
     )
@@ -164,4 +144,16 @@ const AuthForm: React.FC<any> = ({submit, formChange}) => {
             <Button size="large" type="primary" htmlType="submit">Авторизация</Button>
         </form>
     )
+}
+
+type RegisterFormValueType = {
+    password: string,
+    email: string,
+    firstname: string
+    lastname: string
+}
+
+type AuthFormValueType = {
+    password: string,
+    email: string,
 }
