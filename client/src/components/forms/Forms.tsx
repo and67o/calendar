@@ -36,7 +36,6 @@ const Forms: React.FC<any> = () => {
 
     const sendAuthorization = (values: any) => {
         const {password, email} = values
-        alert(`Идет запрос на авторизацию логин: ${email} и пароль: ${password}`)
         dispatch(loginThunk(email, password))
     }
 

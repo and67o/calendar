@@ -3,11 +3,13 @@ import {appReducer} from "./app";
 import thunkMiddleware, {ThunkAction} from 'redux-thunk';
 import {authReducer} from "./auth-page";
 import {calendarReducer} from "./calendar-page";
+import {usersReducer} from "./users-page";
 
 const reducers = combineReducers({
     app: appReducer,
     auth: authReducer,
-    calendar: calendarReducer
+    calendar: calendarReducer,
+    users: usersReducer
 });
 
 type RootReducerType = typeof reducers

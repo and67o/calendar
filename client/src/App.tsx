@@ -1,7 +1,6 @@
-import React, {useEffect} from 'react';
+import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {getCheckServer, getIsInitialize, getTestMessage} from "./redux/app-selector";
-import {actionsApp, getCheckTestServer} from "./redux/app";
+import {getIsInitialize} from "./redux/app-selector";
 import {FormComponentContainer} from "./components/forms/Forms";
 import CalendarComponent from "./components/calendar/Calendar";
 import Preloader from "./components/prelodaer/Preloader";

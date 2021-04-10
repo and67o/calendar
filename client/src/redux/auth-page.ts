@@ -1,7 +1,7 @@
 import {BaseThunkType, InferActionsTypes} from "./redux-store";
-import {actionsApp, getCheckTestServer} from "./app";
+import {getCheckTestServer} from "./app";
 import {authAPI} from "../api/auth-api";
-import jwt_decode from "jwt-decode"
+import jwt_decode from "jwt-decode";
 import {userAPI} from "../api/user-api";
 
 const initialState = {
@@ -16,7 +16,7 @@ export const authReducer = (state = initialState, action: ActionsType): InitialS
             return {
                 ...state,
                 login: action.login,
-                auth: true
+                auth: action.auth
             }
         case "calendar/auth/SET-INIT":
             return {
@@ -29,9 +29,10 @@ export const authReducer = (state = initialState, action: ActionsType): InitialS
 }
 
 export const actionsAuth = {
-    setLogin: (login: string) => ({
+    setLogin: (login: string, auth: boolean) => ({
         type: "calendar/auth/SET-AUTH",
-        login
+        login,
+        auth
     } as const),
     setInitialize: (init: boolean) => ({
         type: "calendar/auth/SET-INIT",
@@ -41,11 +42,23 @@ export const actionsAuth = {
 
 export const checkAuth = (): ThunkType =>
     async (dispatch) => {
+        dispatch(actionsAuth.setInitialize(true))
         await dispatch(getCheckTestServer())
             .then(() => {
                 console.log("Сервер прошел проверку можно начинать проверку авторизации")
+                if (!!localStorage.token) {
+                    const decode: any = jwt_decode(localStorage.token)
+                    const id = decode.id
+                    dispatch(getUserDataThunk(id))
+                } else {
+                    console.log("вы не авторизованы")
+                    dispatch(actionsAuth.setInitialize(false))
+                }
             })
-            .catch(() => console.log("Сервер не прошел проверку"))
+            .catch(() => {
+                console.log("Сервер не прошел проверку")
+                dispatch(actionsAuth.setInitialize(false))
+            })
     }
 
 export const registerThunk = (email: string | null, password: string | null, firstname: string | null, lastname: string | null): ThunkType =>
@@ -59,8 +72,7 @@ export const registerThunk = (email: string | null, password: string | null, fir
         })
         const res = authAPI.register(data)
             .then(res => {
-                debugger
-                dispatch(actionsAuth.setInitialize(false))
+                dispatch(loginThunk(email, password))
             })
             .catch()
 
@@ -70,14 +82,12 @@ export const getUserDataThunk = (id: number): ThunkType =>
     async (dispatch) => {
         await userAPI.auth(id)
             .then((res: any) => {
-                debugger
                 const data = res.Data
-                dispatch(actionsAuth.setLogin(data.firstname))
+                dispatch(actionsAuth.setLogin(data.firstname, true))
             })
-            .catch()
+            .catch(() => console.log("Сбой сервера"))
 
     }
-
 
 export const loginThunk = (email: string | null, password: string | null): ThunkType =>
     async (dispatch) => {
@@ -86,9 +96,8 @@ export const loginThunk = (email: string | null, password: string | null): Thunk
             email: email,
             password: password
         })
-        const res = authAPI.login(data)
-            .then(res => {
-                debugger
+        authAPI.login(data)
+            .then((res) => {
                 const token = res.Data.AccessToken
                 const decoded: any = jwt_decode(token)
                 const id: number = decoded.id
@@ -96,8 +105,16 @@ export const loginThunk = (email: string | null, password: string | null): Thunk
                 localStorage.token = token
                 dispatch(actionsAuth.setInitialize(false))
             })
-            .catch()
+            .catch(err => {
+                console.log(`Ошибка авторизации. Ошибка с сервера: '${err}' `)
+                dispatch(actionsAuth.setInitialize(false))
+            })
+    }
 
+export const logoutThunk = (): ThunkType =>
+    async (dispatch) => {
+        localStorage.token = null
+        dispatch(actionsAuth.setLogin(null, false))
     }
 
 type InitialStateType = typeof initialState
