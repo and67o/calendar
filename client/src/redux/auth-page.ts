@@ -115,6 +115,7 @@ export const logoutThunk = (): ThunkType =>
     async (dispatch) => {
         localStorage.token = null
         dispatch(actionsAuth.setLogin(null, false))
+        dispatch(actionsAuth.setInitialize(false))
     }
 
 type InitialStateType = typeof initialState

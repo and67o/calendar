@@ -1,8 +1,9 @@
 import {BaseThunkType, InferActionsTypes} from "./redux-store";
 import {userAPI} from "../api/user-api";
+import jwt_decode from "jwt-decode";
 
 const initialState = {
-    users: []
+    users: <any>[]
 }
 
 export const usersReducer = (state = initialState, action: ActionsType): InitialStateType => {
@@ -28,7 +29,10 @@ export const getUsersThunk = (): ThunkType =>
     async (dispatch) => {
         await userAPI.users()
             .then((res) => {
-                dispatch(actionsUsers.setUsers(res))
+                const decode: any = jwt_decode(localStorage.token)
+                const myId = decode.id
+                const users = res.filter((user: any) => user.id !== myId)
+                dispatch(actionsUsers.setUsers(users))
             })
             .catch()
     }
