@@ -9,7 +9,7 @@ import {getDataUser} from "../../redux/auth-selector";
 import {getUsersThunk} from "../../redux/users-page";
 import {getUsers} from "../../redux/users-selector";
 import {getDataDay} from "../../redux/calendar-page";
-import {FormComponentContainer, HolidayAddForm} from "../forms/Forms";
+import {HolidayAddForm} from "../forms/Forms";
 
 const CalendarComponent: React.FC<CalendarComponentPropsValueType> = ({auth}) => {
 
@@ -19,7 +19,7 @@ const CalendarComponent: React.FC<CalendarComponentPropsValueType> = ({auth}) =>
     const [dayItemData, setDayItemData] = useState("день не выбран")
 
     const onClickDay = (items: any, value: any) => {
-        setDayItemData(`Дата: ${value._d}`)
+        setDayItemData(value._d)
     }
 
     return (
@@ -92,7 +92,7 @@ const DayItemComponent: React.FC<DayItemComponentPropsValueType> = ({day}) => {
 
     return (
         <div>
-            <div>{day}</div>
+            <div>{`${day}`}</div>
             <HolidayAddForm day={day}/>
         </div>
     )

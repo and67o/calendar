@@ -23,6 +23,11 @@ export const calendarReducer = (state = initialState, action: ActionsType): Init
                 ...state,
                 holidays: action.holidays,
             }
+        case "calendar/calendar/ADD-HOLIDAY":
+            return {
+                ...state,
+                holidays: state.holidays.concat(action.holiday)
+            }
         default:
             return state
     }

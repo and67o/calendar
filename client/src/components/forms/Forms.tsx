@@ -7,6 +7,7 @@ import 'antd/dist/antd.css';
 import {loginThunk, registerThunk} from "../../redux/auth-page";
 import {getInit} from "../../redux/auth-selector";
 import Preloader from "../prelodaer/Preloader";
+import {actionsCalendar} from "../../redux/calendar-page";
 
 export const FormComponentContainer = () => {
 
@@ -148,13 +149,26 @@ const AuthForm: React.FC<any> = ({submit, formChange}) => {
 
 export const HolidayAddForm:React.FC<HolidayAddFormPropsType> = ({day}) => {
 
+    const dispatch = useDispatch()
+
     const formik = useFormik({
         initialValues: {
             content: ''
         },
         onSubmit: values => {
-            console.log(`${day} описание праздник: ${values.content}`)
-            console.log(day)
+            console.log(`${day} описание праздника: ${values.content}`)
+            let date = new Date(day)
+            let month = date.getMonth()
+            let dayHoliday = date.getDate()
+            let holiday = {
+                type: "success",
+                content: values.content,
+                day: dayHoliday,
+                month: month
+            }
+            console.log(holiday)
+            dispatch(actionsCalendar.addHoliday(holiday))
+
         }
     })
 
