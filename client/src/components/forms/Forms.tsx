@@ -146,14 +146,43 @@ const AuthForm: React.FC<any> = ({submit, formChange}) => {
     )
 }
 
+export const HolidayAddForm:React.FC<HolidayAddFormPropsType> = ({day}) => {
+
+    const formik = useFormik({
+        initialValues: {
+            content: ''
+        },
+        onSubmit: values => {
+            console.log(`${day} описание праздник: ${values.content}`)
+            console.log(day)
+        }
+    })
+
+    return (
+        <form onSubmit={formik.handleSubmit}>
+            <label htmlFor="content">Оисание праздника</label>
+            <Input id="content"
+                   name="content"
+                   type="text"
+                   onChange={formik.handleChange}
+                   value={formik.values.content}
+                   {...formik.getFieldProps('content')}
+            />
+            <Button size="large" type="primary" htmlType="submit">Добавить праздник</Button>
+        </form>
+    )
+}
+
 type RegisterFormValueType = {
     password: string,
     email: string,
     firstname: string
     lastname: string
 }
-
 type AuthFormValueType = {
     password: string,
     email: string,
+}
+type HolidayAddFormPropsType = {
+    day: string,
 }

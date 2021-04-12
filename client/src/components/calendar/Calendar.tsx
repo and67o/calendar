@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import 'antd/dist/antd.css';
 import {Calendar, Badge} from 'antd';
 import 'moment/locale/ru';
@@ -8,26 +8,25 @@ import {getHolidays} from "../../redux/calendar-selector";
 import {getDataUser} from "../../redux/auth-selector";
 import {getUsersThunk} from "../../redux/users-page";
 import {getUsers} from "../../redux/users-selector";
+import {getDataDay} from "../../redux/calendar-page";
+import {FormComponentContainer, HolidayAddForm} from "../forms/Forms";
 
-const CalendarComponent = () => {
+const CalendarComponent: React.FC<CalendarComponentPropsValueType> = ({auth}) => {
 
-    const listHappy = useSelector(getHolidays)
+    const happyList = useSelector(getHolidays)
     const items = 2
 
-    const onClickDay = (items:any, value:any) => {
-        debugger
+    const [dayItemData, setDayItemData] = useState("день не выбран")
+
+    const onClickDay = (items: any, value: any) => {
+        setDayItemData(`Дата: ${value._d}`)
     }
 
     return (
         <div className="calendar">
-            <div>
-                <ul className="calendar__list">
-                    {listHappy.map((item:any, index:any) => <li key={index}>{item.content} дата:{item.day} </li>)}
-                    После регистрации\логинизации здесь будут события за текущий месяц
-                </ul>
-                <FriendComponent/>
-            </div>
+            {auth ? <LeftListsComponents happyList={happyList}/> : null}
             <Calendar onSelect={(value) => onClickDay(items, value)} dateCellRender={dateCellRender} locale={locale}/>
+            {auth ? <DayItemComponent day={dayItemData}/> : null}
         </div>
     )
 }
@@ -46,9 +45,9 @@ const dateCellRender = (value: any) => {
 
     return (
         <ul className="events">
-            {happy.map((item:any, index:any) => (
-               <li key={index}>
-                    <Badge status={item.type} text={item.content} />
+            {happy.map((item: any, index: any) => (
+                <li key={index}>
+                    <Badge status={item.type} text={item.content}/>
                 </li>
             ))}
         </ul>
@@ -76,14 +75,59 @@ const FriendList: React.FC<any> = () => {
 
 }
 
-const FriendsItems: React.FC<any> = ({users}) => users.map((item: any, index: number) => <FriendItem key={index} email={item.email} firstname={item.firstname} lastname={item.lastname}/>)
+const FriendsItems: React.FC<any> = ({users}) => users.map((item: any, index: number) => <FriendItem key={index}
+                                                                                                     email={item.email}
+                                                                                                     firstname={item.firstname}
+                                                                                                     lastname={item.lastname}/>)
 
 const FriendItem: React.FC<any> = ({email, firstname, lastname}) => <div>{email} ({firstname} {lastname})</div>
 
-const DayItemComponent: React.FC<any> = () => {
+const DayItemComponent: React.FC<DayItemComponentPropsValueType> = ({day}) => {
+
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        dispatch(getDataDay(day))
+    }, [day])
+
     return (
-        <div>Взаимодействие со днём</div>
+        <div>
+            <div>{day}</div>
+            <HolidayAddForm day={day}/>
+        </div>
+    )
+}
+
+const HappyItem: React.FC<HappyItemPropsValueType> = ({content, day}) => {
+    return (
+        <li>{content} <strong>дата: {day}</strong></li>
+    )
+}
+
+const LeftListsComponents: React.FC<LeftListsComponentsPropsValueType> = ({happyList}) => {
+
+    return (
+        <div>
+            <ul className="calendar__list">{happyList.map((item: any, index: any) => <HappyItem key={index}
+                                                                                                content={item.content}
+                                                                                                day={item.day}/>)}</ul>
+            <FriendComponent/>
+        </div>
     )
 }
 
 export default CalendarComponent
+
+type HappyItemPropsValueType = {
+    content: string,
+    day: string
+}
+type DayItemComponentPropsValueType = {
+    day: string
+}
+type CalendarComponentPropsValueType = {
+    auth: boolean
+}
+type LeftListsComponentsPropsValueType = {
+    happyList: any[]
+}

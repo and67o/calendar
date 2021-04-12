@@ -23,7 +23,7 @@ const App = () => {
             <div className="wrapper">
                 <Header/>
                 {dataUser.auth ? <DataUser login={dataUser.login}/> : <FormComponentContainer/>}
-                <CalendarComponent/>
+                <CalendarComponent auth={dataUser.auth}/>
             </div>
         )
     } else {
